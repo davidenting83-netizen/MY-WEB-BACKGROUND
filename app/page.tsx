@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, Facebook, Mail, Phone, MapPin, Copy, Check, Code2, Server, Layers, Sparkles, Globe, Smartphone, Palette, ShieldCheck, Menu, X } from "lucide-react";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import ProfileAvatar from "@/components/ProfileAvatar";
 import { stack } from "@/lib/data";
 
 const EMAIL = "davidenting83@gmail.com";
@@ -46,34 +47,6 @@ function Navbar() {
   );
 }
 
-function Avatar() {
-  const badges = [["TypeScript", "top-2 left-0", "0s"], ["Next.js", "top-16 -right-2", "1s"], ["Supabase", "bottom-10 -left-2", "2s"], ["Secure", "bottom-0 right-4", "1.5s"]];
-  return (
-    <div className="relative mx-auto h-72 w-72 sm:h-96 sm:w-96">
-      <div className="absolute inset-6 rounded-full bg-gradient-to-br from-cyber/40 to-emerald/30 blur-3xl" />
-      <svg viewBox="0 0 400 400" className="relative h-full w-full float" role="img" aria-label="Developer emblem">
-        <defs>
-          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#06B6D4" /><stop offset="1" stopColor="#10B981" /></linearGradient>
-          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#fff" stopOpacity=".18" /><stop offset="1" stopColor="#fff" stopOpacity=".03" /></linearGradient>
-        </defs>
-        <polygon points="200,28 352,114 352,286 200,372 48,286 48,114" fill="url(#glass)" stroke="url(#g1)" strokeWidth="2" />
-        <polygon points="200,70 316,136 316,264 200,330 84,264 84,136" fill="#090D16" fillOpacity=".7" stroke="#fff" strokeOpacity=".12" />
-        {/* head + shoulders */}
-        <circle cx="200" cy="150" r="46" fill="url(#g1)" />
-        <path d="M110 282c8-52 46-76 90-76s82 24 90 76c-26 22-56 34-90 34s-64-12-90-34z" fill="url(#g1)" fillOpacity=".85" />
-        {/* code brackets on chest */}
-        <path d="M176 250l-18 18 18 18M224 250l18 18-18 18M208 244l-16 48" stroke="#090D16" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-        {/* visor */}
-        <rect x="170" y="140" width="60" height="16" rx="8" fill="#090D16" fillOpacity=".75" />
-        <rect x="178" y="145" width="44" height="6" rx="3" fill="#10B981" />
-      </svg>
-      {badges.map(([t, pos, d]) => (
-        <span key={t} style={{ animationDelay: d }} className={`float glass absolute ${pos} !rounded-full px-3 py-1.5 text-xs font-medium text-cyber`}>{t}</span>
-      ))}
-    </div>
-  );
-}
-
 function Hero() {
   return (
     <section id="top" className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-32 md:grid-cols-2 md:pt-40">
@@ -97,7 +70,7 @@ function Hero() {
           <a href="#contact" className="btn-ghost">Contact Me</a>
         </motion.div>
       </div>
-      <Avatar />
+      <ProfileAvatar />
     </section>
   );
 }
@@ -216,4 +189,4 @@ export default function Home() {
       </footer>
     </>
   );
-                }
+      }
