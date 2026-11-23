@@ -1,7 +1,7 @@
 export type Project = { title: string; desc: string; tags: string[]; link: string; image: string };
 
 export const projects: Project[] = [
-  { title: "INC MineSync", desc: "Enterprise mining operations & environmental monitoring dashboard with multi-role access, offline-first sync, and real-time reporting.", tags: ["Next.js", "Supabase", "Offline-first"], link: "https://inc-maasin-site-2.vercel.app/", image: "/images/minesync.png" },
+  { title: "INC MineSync", desc: "Enterprise mining operations & environmental monitoring dashboard with multi-role access, offline-first sync, and real-time reporting.", tags: ["Next.js", "Supabase", "Offline-first"], link: "https://minesyncoffline.vercel.app/", image: "/images/minesync.png" },
   { title: "TaraBook", desc: "Online booking web application for local businesses and services across the Philippines with instant scheduling and business management.", tags: ["React", "Booking", "Dashboard"], link: "https://tarabook-app.vercel.app/", image: "/images/tarabook.png" },
   { title: "Payko Payment Gateway", desc: "Fast, secure digital payment gateway solution designed for seamless online merchant transactions and automated payment verification.", tags: ["Payments", "Security", "TypeScript"], link: "https://payko-app.vercel.app/", image: "/images/payko.png" },
   { title: "Palaweño Hub", desc: "Centralized community web platform built for Palaweños, featuring local utility updates, market prices, health, and disaster advisories.", tags: ["Community", "Next.js", "Real-time"], link: "https://palawanhub.vercel.app/", image: "/images/palawanhub.png" },
